@@ -1,0 +1,70 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.3.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: a4f1867daed2d3055efd316068546c25f69a6493c6e14e7f78bb776e0c9b726a
+
+name:           SemiringAlgebra
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/SemiringAlgebra#readme>
+homepage:       https://github.com/githubuser/SemiringAlgebra#readme
+bug-reports:    https://github.com/githubuser/SemiringAlgebra/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/SemiringAlgebra
+
+library
+  exposed-modules:
+      Formula
+      Matrix
+      MMP
+      System2
+      System3
+      Tropical
+  other-modules:
+      Paths_SemiringAlgebra
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , hspec
+  default-language: Haskell2010
+
+executable SemiringAlgebra-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_SemiringAlgebra
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      SemiringAlgebra
+    , base >=4.7 && <5
+    , hspec
+  default-language: Haskell2010
+
+test-suite SemiringAlgebra-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_SemiringAlgebra
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      SemiringAlgebra
+    , base >=4.7 && <5
+    , hspec
+  default-language: Haskell2010
